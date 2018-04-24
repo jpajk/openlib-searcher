@@ -1,0 +1,14 @@
+.sidebar {
+  position: sticky;
+  height: 100vh;
+}
+
+
+#app > div > div.sidebar > div > ul.main {
+  align-self: flex-start!important;
+  height: 100%;
+}
+
+#app > div > div.sidebar > div > ul > li.nav-item.btn.quit {
+  margin-top: auto;
+}
