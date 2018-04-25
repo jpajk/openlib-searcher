@@ -26,6 +26,8 @@
 
         if (value) {
           this.marginTop = 10
+
+          this.$store.dispatch('searchApi', value)
         } else {
           this.marginTop = 40
         }
