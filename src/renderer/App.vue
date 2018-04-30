@@ -2,7 +2,7 @@
   <div class="container-fluid" id="app">
     <div class="row">
       <AppSidebar v-on:quit="quit"></AppSidebar>
-      <div class="col-md-9">
+      <div class="col-md-9" id="app-view">
         <router-view></router-view>
       </div>
     </div>

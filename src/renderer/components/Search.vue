@@ -4,20 +4,33 @@
             <h3 class="text-center">Search for books</h3>
             <form class="">
                 <div class="form-group">
-                    <input @input="handleInput" v-model="searchValue" type="text" class="form-control" id="exampleInputPassword1" placeholder="Type a book title or author in...">
+                    <input
+                            @input="handleInput"
+                            v-model="searchValue"
+                            type="text"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            placeholder="Type a book title or author in..."
+                    >
                 </div>
             </form>
+        </div>
+        <div class="col-sm-11 offset-1">
+            <search-results/>
         </div>
     </div>
 </template>
 
 <script>
-  export default {
+  import SearchResults from './SearchResults'
+
+export default {
     name: 'Search',
-    data: () => {
+    components: {SearchResults},
+    data: function () {
       return {
         searchValue: '',
-        marginTop: 40
+        marginTop: this.$store.getters.fetchedResults.length ? 0 : 40
       }
     },
     methods: {
@@ -27,7 +40,7 @@
         if (value) {
           this.marginTop = 10
 
-          this.$store.dispatch('searchApi', value)
+          this.$store.dispatch('typePhrase', value)
         } else {
           this.marginTop = 40
         }
