@@ -1,8 +1,12 @@
 .sidebar {
-  position: sticky;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
+  z-index: 1
 }
 
+#app-view {
+  margin-left: 200px
+}
 
 #app > div > div.sidebar > div > ul.main {
   align-self: flex-start!important;

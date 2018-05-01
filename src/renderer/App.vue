@@ -14,7 +14,13 @@
 
   require('font-awesome-loader')
 
-export default {
+  /**
+   * @todo has to have a book detail view
+   * @todo has to solve the problem of mobile view
+   * @todo has to so
+   */
+
+  export default {
     name: 'vuelectron',
     components: {AppSidebar},
     methods: {
